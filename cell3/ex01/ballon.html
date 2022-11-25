@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ballon</title>
+	<style>
+		body {
+			display: flex;
+			height: 100vh;
+			flex-direction: column-reverse;
+			justify-content: center;
+			background-color: seashell;
+		}
+		.ballon {
+			width: 200px;
+			height: 200px;
+			margin: 0 auto 10px;
+			border-radius: 50%;
+			color: black;
+		}
+		.rojo {
+			background-color: red;
+		}
+		.verde {
+			background-color: green;
+		}
+		.azul {
+			background-color: blue;
+		}
+	</style>
+	<script>
+		function changeColor(change)
+		{
+			if(change.classList.contains("rojo"))
+			{
+				change.classList.remove("rojo");
+				change.classList.add("verde");
+			}else if(change.classList.contains("verde"))
+			{
+				change.classList.remove("verde");
+				change.classList.add("azul");
+			}
+			else {
+				change.classList.remove("azul");
+				change.classList.add("rojo");
+			}
+			return false;
+		}
+		function handleClick(change)
+		{
+			changeColor(change);
+			if (change.offsetWidth < "420")
+			{
+				change.style.width = (change.offsetWidth + 10) + "px";
+				change.style.height = (change.offsetHeight + 10) + "px";
+			}
+			else {
+				change.style.width = "200px";
+				change.style.height = "200px";
+			}
+		}
+		function onHover(change)
+		{
+			invertColor(change);
+			change.style.width = Math.max(200,  change.offsetWidth - 5) + "px";
+			change.style.height = Math.max(200,  change.offsetHeight - 5) + "px";
+		}
+		function invertColor(change)
+		{
+			if(change.classList.contains("verde"))
+			{
+				change.classList.remove("verde");
+				change.classList.add("azul");
+			}else if(change.classList.contains("azul"))
+			{
+				change.classList.remove("azul");
+				change.classList.add("rojo");
+			}
+			else {
+				change.classList.remove("rojo");
+				change.classList.add("verde");
+			}
+			return false;
+		}
+		</script>
+</head>
+<body>
+	<div class="ballon red" onclick="handleClick(this);" onmouseleave="onHover(this)">
+	</div>
+</body>
+</html>

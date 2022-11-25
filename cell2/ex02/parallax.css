@@ -1,0 +1,35 @@
+body{
+	margin: 0;
+}
+
+div{
+	text-align: center;
+	color: white;
+}
+
+.parallax {
+	background-color: black;
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;	
+}
+
+.text {
+	position: relative;
+	top: 50%;
+}
+
+.block {
+	background-color: black;
+	height: 300px;
+}
+
+#img1 {
+	background-image: url("https://cdn.pixabay.com/photo/2012/10/10/05/04/train-60539__480.jpg");
+}
+
+#img2 {
+	background-image: url("https://cdn.pixabay.com/photo/2017/04/25/06/15/father-and-son-2258681__480.jpg");
+}

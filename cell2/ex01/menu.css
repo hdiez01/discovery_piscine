@@ -1,0 +1,45 @@
+.botonMenu{
+    margin: 0;
+    display: block;
+    width: 40px;
+    height: 36px;
+    padding: 10px;
+    border-radius: 30px;
+    background: #5D9AFF;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    position: relative;
+}
+
+.botonMenu span{
+    display: block;
+    width: 35px;
+    height: 10px;
+    border-radius: 30px;
+    background: rgb(249, 52, 52);
+    margin-top: 2px;
+}
+
+label{
+    cursor: pointer;
+}
+
+#menu-toggle{
+    display: none;
+}
+
+#tickMenu{
+    display: none;
+    text-align: left;
+    padding: 10px 0;
+}
+
+#tickMenu li a{
+    display: block;
+    padding: 10px 0;
+    color: black;
+}
+
+#menu-toggle:checked + #tickMenu{
+    display: block;
+}
